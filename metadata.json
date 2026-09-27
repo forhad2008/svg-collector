@@ -1,0 +1,6 @@
+{
+  "name": "Vectra Premium SVG Icons Platform",
+  "description": "A high-performance interactive gallery and customizer for 100+ precision-crafted SVG icons. Perfect for developers and designers to build, customize, and export tailored icons.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

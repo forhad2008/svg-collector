@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  --neu-bg: #eef2f6;
+  --neu-shadow-dark: #cfd8e5;
+  --neu-shadow-light: #ffffff;
+}
+
+body {
+  background-color: var(--neu-bg) !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Neumorphic Utilities */
+.neu-container {
+  background-color: var(--neu-bg);
+}
+
+.neu-raised {
+  background: var(--neu-bg);
+  box-shadow: 6px 6px 14px var(--neu-shadow-dark), 
+             -6px -6px 14px var(--neu-shadow-light);
+}
+
+.neu-raised-sm {
+  background: var(--neu-bg);
+  box-shadow: 4px 4px 8px var(--neu-shadow-dark), 
+             -4px -4px 8px var(--neu-shadow-light);
+}
+
+.neu-raised-pill {
+  background: var(--neu-bg);
+  box-shadow: 3px 3px 6px var(--neu-shadow-dark), 
+             -3px -3px 6px var(--neu-shadow-light);
+  border-radius: 9999px;
+}
+
+.neu-pressed {
+  background: var(--neu-bg);
+  box-shadow: inset 4px 4px 8px var(--neu-shadow-dark), 
+             inset -4px -4px 8px var(--neu-shadow-light);
+}
+
+.neu-pressed-sm {
+  background: var(--neu-bg);
+  box-shadow: inset 2px 2px 5px var(--neu-shadow-dark), 
+             inset -2px -2px 5px var(--neu-shadow-light);
+}
+
+.neu-convex {
+  background: linear-gradient(135deg, #ffffff 0%, var(--neu-bg) 100%);
+  box-shadow: 6px 6px 14px var(--neu-shadow-dark), 
+             -6px -6px 14px var(--neu-shadow-light);
+}
+
+.neu-concave {
+  background: linear-gradient(135deg, var(--neu-bg) 0%, #ffffff 100%);
+  box-shadow: 6px 6px 14px var(--neu-shadow-dark), 
+             -6px -6px 14px var(--neu-shadow-light);
+}
+
+/* Hover and active micro-interactions */
+.neu-btn-interactive {
+  background: var(--neu-bg);
+  box-shadow: 4px 4px 8px var(--neu-shadow-dark), 
+             -4px -4px 8px var(--neu-shadow-light);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neu-btn-interactive:hover {
+  box-shadow: 2px 2px 4px var(--neu-shadow-dark), 
+             -2px -2px 4px var(--neu-shadow-light);
+  transform: translateY(1px);
+}
+
+.neu-btn-interactive:active, .neu-btn-interactive.active {
+  box-shadow: inset 3px 3px 6px var(--neu-shadow-dark), 
+             inset -3px -3px 6px var(--neu-shadow-light);
+  transform: translateY(1.5px);
+}
+
+.neu-card-interactive {
+  background: var(--neu-bg);
+  box-shadow: 6px 6px 12px var(--neu-shadow-dark), 
+             -6px -6px 12px var(--neu-shadow-light);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neu-card-interactive:hover {
+  box-shadow: 2px 2px 5px var(--neu-shadow-dark), 
+             -2px -2px 5px var(--neu-shadow-light);
+}
+
+.neu-card-interactive.active {
+  box-shadow: inset 4px 4px 8px var(--neu-shadow-dark), 
+             inset -4px -4px 8px var(--neu-shadow-light);
+}
+
+/* Custom Webkit scrollbar for premium Neumorphic look */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neu-bg);
+  box-shadow: inset 2px 2px 4px var(--neu-shadow-dark), 
+             inset -2px -2px 4px var(--neu-shadow-light);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+  border: 2px solid var(--neu-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
