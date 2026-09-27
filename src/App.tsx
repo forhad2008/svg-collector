@@ -480,47 +480,55 @@ export default function App() {
               {/* Developer Code Output tab panels (RHS) */}
               <div className="lg:col-span-7 flex flex-col h-full">
                 <div className="flex items-center justify-between border-b border-slate-200/50 pb-3">
-                  <div className="flex items-center gap-1 p-1 bg-[#eef2f6] neu-pressed-sm rounded-xl">
+                  <div className="flex items-center gap-1 p-1 bg-[#eef2f6] neu-pressed-sm rounded-xl overflow-x-auto scrollbar-none w-full max-w-full">
                     <button
                       onClick={() => setActiveCodeTab('svg')}
-                      className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap ${activeCodeTab === 'svg' ? 'neu-raised text-slate-800' : 'text-slate-500 hover:text-slate-800'}`}
+                      className={`flex-1 sm:flex-initial px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap text-center ${activeCodeTab === 'svg' ? 'neu-raised text-slate-800' : 'text-slate-500 hover:text-slate-800'}`}
                     >
                       SVG Code
                     </button>
                     <button
                       onClick={() => setActiveCodeTab('react')}
-                      className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap ${activeCodeTab === 'react' ? 'neu-raised text-slate-800' : 'text-slate-500 hover:text-slate-800'}`}
+                      className={`flex-1 sm:flex-initial px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap text-center ${activeCodeTab === 'react' ? 'neu-raised text-slate-800' : 'text-slate-500 hover:text-slate-800'}`}
                     >
                       React JSX
                     </button>
                     <button
                       onClick={() => setActiveCodeTab('tailwind')}
-                      className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap ${activeCodeTab === 'tailwind' ? 'neu-raised text-slate-800' : 'text-slate-500 hover:text-slate-800'}`}
+                      className={`flex-1 sm:flex-initial px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap text-center ${activeCodeTab === 'tailwind' ? 'neu-raised text-slate-800' : 'text-slate-500 hover:text-slate-800'}`}
                     >
                       Tailwind
                     </button>
                     <button
                       onClick={() => setActiveCodeTab('spritesheet')}
-                      className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap ${activeCodeTab === 'spritesheet' ? 'neu-raised text-slate-800' : 'text-slate-500 hover:text-slate-800'}`}
+                      className={`flex-1 sm:flex-initial px-3.5 py-1.5 text-xs font-bold rounded-lg transition-all whitespace-nowrap text-center ${activeCodeTab === 'spritesheet' ? 'neu-raised text-slate-800' : 'text-slate-500 hover:text-slate-800'}`}
                     >
                       Spritesheet
                     </button>
                   </div>
-
-                  <button
-                    onClick={() => copyToClipboard(computedCode, activeCodeTab.toUpperCase())}
-                    className="neu-btn-interactive p-2.5 text-slate-600 rounded-xl flex items-center gap-1.5 text-xs font-bold"
-                    title="Copy Code"
-                  >
-                    {copiedText === activeCodeTab.toUpperCase() ? <Check className="h-4 w-4 text-emerald-600" /> : <Copy className="h-4 w-4 text-slate-500" />}
-                    Copy
-                  </button>
                 </div>
 
                 <div className="relative flex-1 mt-4 rounded-xl overflow-hidden bg-slate-950 border border-slate-900 font-mono text-[11.5px] text-slate-300 leading-relaxed min-h-[170px] max-h-[220px]">
-                  <pre className="absolute inset-0 p-4 overflow-auto scrollbar-thin scrollbar-thumb-slate-800">
+                  <pre className="absolute inset-0 p-4 pr-16 overflow-auto scrollbar-thin scrollbar-thumb-slate-800">
                     <code className="block whitespace-pre">{computedCode}</code>
                   </pre>
+                  
+                  {/* Floating Action Absolute Copy Button */}
+                  {!(activeCodeTab === 'spritesheet' && collection.length === 0) && (
+                    <button
+                      onClick={() => copyToClipboard(computedCode, activeCodeTab.toUpperCase())}
+                      className="absolute top-3 right-3 bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 px-2.5 py-1.5 rounded-lg transition-all flex items-center gap-1.5 text-[11px] font-bold backdrop-blur-sm shadow-md cursor-pointer select-none"
+                      title="Copy Code"
+                    >
+                      {copiedText === activeCodeTab.toUpperCase() ? (
+                        <Check className="h-3.5 w-3.5 text-emerald-500" />
+                      ) : (
+                        <Copy className="h-3.5 w-3.5 text-slate-400" />
+                      )}
+                      <span>Copy</span>
+                    </button>
+                  )}
+
                   {activeCodeTab === 'spritesheet' && collection.length === 0 && (
                     <div className="absolute inset-0 bg-slate-950/95 backdrop-blur-sm flex flex-col items-center justify-center p-4 text-center">
                       <FileCode className="h-8 w-8 text-slate-600 mb-2" />
