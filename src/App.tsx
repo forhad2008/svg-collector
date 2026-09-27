@@ -192,6 +192,9 @@ export default function App() {
             </span>
             Vectra
           </span>
+          <span className="hidden sm:inline-flex px-3 py-1 text-[11px] font-bold text-indigo-600 bg-[#eef2f6] neu-pressed-sm rounded-full">
+            Collect by Abdullah
+          </span>
         </div>
 
         {/* Zone 2: Navigation Links */}
@@ -901,7 +904,10 @@ export default function App() {
       <footer className="w-full max-w-[1720px] mx-auto mt-12 neu-raised rounded-2xl p-6 text-slate-500 text-xs text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
         <div>
           <span className="text-sm font-extrabold tracking-tight text-slate-800 font-display">Vectra Soft-UI Platform</span>
-          <p className="mt-1 text-[11px] text-slate-400 font-medium">102 precision vector shapes with premium customizable neumorphic structures.</p>
+          <p className="mt-1 text-[11px] text-slate-400 font-medium">
+            {ICONS.length} precision vector shapes with premium customizable neumorphic structures.
+            <span className="text-indigo-600 font-bold block md:inline md:ml-2">Collect by Abdullah</span>
+          </p>
         </div>
         <div className="flex items-center gap-5 font-mono font-bold text-[10px]">
           <span>MIT License</span>

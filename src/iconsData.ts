@@ -1399,5 +1399,92 @@ export const ICONS: IconDef[] = [
     paths: [
       "M12 2l3 9-4-1-3 7-1-7-4 1 9-9z"
     ]
+  },
+  {
+    id: "jump-ghost",
+    name: "Jumping Cute Ghost",
+    category: "Jumping Animations",
+    tags: ["halloween", "cute", "scary", "fun", "spirit"],
+    paths: [
+      "M19 10a7 7 0 0 0-14 0v8c0 .7-.3 1.3-.8 1.8A1 1 0 0 0 5 21.5h14a1 1 0 0 0 .8-1.7c-.5-.5-.8-1.1-.8-1.8v-8z",
+      "M12 13a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1z"
+    ],
+    shapes: [
+      { type: "circle", props: { cx: "9", cy: "10", r: "1.5" } },
+      { type: "circle", props: { cx: "15", cy: "10", r: "1.5" } }
+    ]
+  },
+  {
+    id: "jump-trophy",
+    name: "Jumping Winner Trophy",
+    category: "Jumping Animations",
+    tags: ["winner", "gold", "award", "prize", "cup"],
+    paths: [
+      "M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18",
+      "M4 22h16",
+      "M10 14.66V17c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-2.34",
+      "M12 2a6 6 0 0 1 6 6v3a6 6 0 0 1-12 0V8a6 6 0 0 1 6-6z"
+    ]
+  },
+  {
+    id: "jump-cat",
+    name: "Jumping Playful Cat",
+    category: "Jumping Animations",
+    tags: ["cat", "pet", "cute", "animal", "meow"],
+    paths: [
+      "M12 5c-3.3 0-6 2.7-6 6v5a6 6 0 0 0 12 0v-5c0-3.3-2.7-6-6-6z",
+      "M6 8l-2-4 3 2",
+      "M18 8l2-4-3 2",
+      "M11.5 13.5l.5.5.5-.5"
+    ],
+    shapes: [
+      { type: "circle", props: { cx: "9", cy: "11", r: "1" } },
+      { type: "circle", props: { cx: "15", cy: "11", r: "1" } }
+    ]
+  },
+  {
+    id: "jump-cloud",
+    name: "Jumping Cloud Drift",
+    category: "Jumping Animations",
+    tags: ["weather", "rain", "sunny", "sky", "cloud"],
+    paths: [
+      "M17.5 19A5.5 5.5 0 0 0 19 8.25a7.5 7.5 0 0 0-14.5 1.75A5.5 5.5 0 0 0 6 19h11.5z"
+    ]
+  },
+  {
+    id: "jump-gem",
+    name: "Jumping Diamond Gem",
+    category: "Jumping Animations",
+    tags: ["diamond", "gem", "crystal", "jewelry", "premium"],
+    paths: [
+      "M6 3h12l4 6-10 12L2 9z",
+      "M11 3L8 9l4 12 4-12-3-6z",
+      "M2 9h20"
+    ]
+  },
+  {
+    id: "jump-anchor",
+    name: "Jumping Sea Anchor",
+    category: "Jumping Animations",
+    tags: ["marine", "ship", "boat", "ocean", "anchor"],
+    paths: [
+      "M12 5v14M5 12h14",
+      "M5 12a7 7 0 0 0 14 0"
+    ],
+    shapes: [
+      { type: "circle", props: { cx: "12", cy: "5", r: "3" } }
+    ]
+  },
+  {
+    id: "jump-alien",
+    name: "Jumping Alien UFO",
+    category: "Jumping Animations",
+    tags: ["ufo", "space", "sci-fi", "alien", "galaxy"],
+    paths: [
+      "M12 2a6 6 0 0 1 6 6v3H6V8a6 6 0 0 1 6-6z",
+      "M2 13a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-2z",
+      "M6 19l-2 3",
+      "M18 19l2 3"
+    ]
   }
 ];
