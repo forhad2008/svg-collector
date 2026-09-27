@@ -118,3 +118,19 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/* Premium Smooth Floating & Jumping Animation */
+@keyframes rapid-jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-rapid-jump {
+  display: inline-block;
+  animation: rapid-jump 1.2s infinite ease-in-out;
+}
+

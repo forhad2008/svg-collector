@@ -134,6 +134,9 @@ export const SvgIconRenderer: React.FC<Props> = ({ icon, params, sizeOverride })
     </>
   );
 
+  const isJumpingIcon = icon.category === 'Jumping Animations';
+  const animationClass = isJumpingIcon ? 'animate-rapid-jump' : '';
+
   if (style === 'solid-overlay') {
     return (
       <svg
@@ -142,7 +145,7 @@ export const SvgIconRenderer: React.FC<Props> = ({ icon, params, sizeOverride })
         viewBox="0 0 100 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="transition-all duration-200"
+        className={`transition-all duration-200 ${animationClass}`}
       >
         <rect width="100" height="100" rx={backgroundRadius} fill={backgroundColor} />
         <g transform="translate(25, 25) scale(0.5)">
@@ -161,7 +164,7 @@ export const SvgIconRenderer: React.FC<Props> = ({ icon, params, sizeOverride })
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="transition-all duration-200"
+      className={`transition-all duration-200 ${animationClass}`}
     >
       {innerSvg}
     </svg>

@@ -19,7 +19,8 @@ export const CATEGORIES = [
   "Media & Controls",
   "Devices & Technology",
   "Navigation & Arrows",
-  "Design & Creative"
+  "Design & Creative",
+  "Jumping Animations"
 ];
 
 export const ICONS: IconDef[] = [
@@ -1171,6 +1172,232 @@ export const ICONS: IconDef[] = [
       { type: "circle", props: { cx: "5", cy: "5", r: "1" } },
       { type: "circle", props: { cx: "19", cy: "5", r: "1" } },
       { type: "circle", props: { cx: "19", cy: "19", r: "1" } }
+    ]
+  },
+  // --- JUMPING ANIMATIONS (22) ---
+  {
+    id: "jump-arrow-down",
+    name: "Jumping Chevron Down",
+    category: "Jumping Animations",
+    tags: ["arrow", "chevron", "down", "scroll", "indicator"],
+    paths: ["M6 9l6 6 6-6"]
+  },
+  {
+    id: "jump-arrow-up",
+    name: "Jumping Chevron Up",
+    category: "Jumping Animations",
+    tags: ["arrow", "chevron", "up", "top", "back-to-top"],
+    paths: ["M18 15l-6-6-6 6"]
+  },
+  {
+    id: "jump-bounce-ball",
+    name: "Bouncing Ball",
+    category: "Jumping Animations",
+    tags: ["basketball", "game", "toy", "play", "bounce"],
+    paths: [
+      "M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-5-1.5 15 15 0 0 0 5-6.5 15 15 0 0 0 5 6.5 8 8 0 0 1-5 1.5z",
+      "M4.5 7.5A15 15 0 0 0 12 12a15 15 0 0 0 7.5-4.5"
+    ]
+  },
+  {
+    id: "jump-rocket",
+    name: "Jumping Rocket",
+    category: "Jumping Animations",
+    tags: ["space", "shuttle", "launch", "startup", "speed"],
+    paths: [
+      "M12 2s4 4 4 10a4 4 0 0 1-8 0c0-6 4-10 4-10z",
+      "M9 15v3a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-3"
+    ],
+    shapes: [{ type: "line", props: { x1: "12", y1: "20", x2: "12", y2: "22" } }]
+  },
+  {
+    id: "jump-heartbeat",
+    name: "Jumping Heart",
+    category: "Jumping Animations",
+    tags: ["love", "heart", "like", "favorite", "pulse"],
+    paths: ["M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"]
+  },
+  {
+    id: "jump-notification",
+    name: "Jumping Bell",
+    category: "Jumping Animations",
+    tags: ["notification", "alert", "reminder", "sound", "bell"],
+    paths: [
+      "M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9",
+      "M13.73 21a2 2 0 0 1-3.46 0"
+    ]
+  },
+  {
+    id: "jump-star",
+    name: "Jumping Sparkle Star",
+    category: "Jumping Animations",
+    tags: ["magic", "premium", "fancy", "rating", "favorite"],
+    paths: ["M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"]
+  },
+  {
+    id: "jump-download",
+    name: "Jumping Download",
+    category: "Jumping Animations",
+    tags: ["save", "export", "file", "download", "fetch"],
+    paths: [
+      "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4",
+      "M7 10l5 5 5-5",
+      "M12 15V3"
+    ]
+  },
+  {
+    id: "jump-upload",
+    name: "Jumping Upload",
+    category: "Jumping Animations",
+    tags: ["save", "import", "file", "upload", "publish"],
+    paths: [
+      "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4",
+      "M17 10l-5-5-5 5",
+      "M12 5v12"
+    ]
+  },
+  {
+    id: "jump-bubble",
+    name: "Jumping Chat Bubble",
+    category: "Jumping Animations",
+    tags: ["chat", "message", "sms", "comment", "discussion"],
+    paths: [
+      "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+    ]
+  },
+  {
+    id: "jump-game",
+    name: "Jumping Game Controller",
+    category: "Jumping Animations",
+    tags: ["play", "game", "retro", "nintendo", "console"],
+    paths: [
+      "M6 12h4M8 10v4",
+      "M15 11h.01M18 13h.01"
+    ],
+    shapes: [{ type: "rect", props: { x: "2", y: "6", width: "20", height: "12", rx: "3" } }]
+  },
+  {
+    id: "jump-music",
+    name: "Jumping Music Note",
+    category: "Jumping Animations",
+    tags: ["sound", "tune", "song", "audio", "vibe"],
+    paths: [
+      "M9 18V5l12-2v13"
+    ],
+    shapes: [
+      { type: "circle", props: { cx: "6", cy: "18", r: "3" } },
+      { type: "circle", props: { cx: "18", cy: "16", r: "3" } }
+    ]
+  },
+  {
+    id: "jump-gift",
+    name: "Jumping Gift Box",
+    category: "Jumping Animations",
+    tags: ["present", "holiday", "surprise", "box", "reward"],
+    paths: [
+      "M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8",
+      "M12 22V7",
+      "M7.5 7.5c-1.5 0-2.5-1-2.5-2.5s1-2.5 2.5-2.5 2.5 1.5 2.5 2.5H12c0-1 1-2.5 2.5-2.5S17 3.5 17 5s-1 2.5-2.5 2.5H7.5z"
+    ],
+    shapes: [{ type: "rect", props: { x: "2", y: "7", width: "20", height: "5", rx: "1" } }]
+  },
+  {
+    id: "jump-cart",
+    name: "Jumping Shopping Cart",
+    category: "Jumping Animations",
+    tags: ["shop", "buy", "store", "commerce", "bag"],
+    paths: [
+      "M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+    ],
+    shapes: [
+      { type: "circle", props: { cx: "9.5", cy: "20.5", r: "1.5" } },
+      { type: "circle", props: { cx: "18.5", cy: "20.5", r: "1.5" } }
+    ]
+  },
+  {
+    id: "jump-battery",
+    name: "Jumping Battery Indicator",
+    category: "Jumping Animations",
+    tags: ["energy", "charge", "power", "cell", "hardware"],
+    paths: [
+      "M23 11v2"
+    ],
+    shapes: [
+      { type: "rect", props: { x: "1", y: "6", width: "18", height: "12", rx: "2" } },
+      { type: "line", props: { x1: "6", y1: "10", x2: "6", y2: "14" } },
+      { type: "line", props: { x1: "10", y1: "10", x2: "10", y2: "14" } },
+      { type: "line", props: { x1: "14", y1: "10", x2: "14", y2: "14" } }
+    ]
+  },
+  {
+    id: "jump-idea",
+    name: "Jumping Lightbulb",
+    category: "Jumping Animations",
+    tags: ["idea", "bulb", "innovation", "brain", "smart"],
+    paths: [
+      "M15 14c.95-.9 1.5-2.2 1.5-3.5A4.5 4.5 0 0 0 12 6a4.5 4.5 0 0 0-4.5 4.5c0 1.3.55 2.6 1.5 3.5l1.5 2h3l1.5-2z",
+      "M9 18h6",
+      "M10 21h4"
+    ]
+  },
+  {
+    id: "jump-coffee",
+    name: "Jumping Coffee Cup",
+    category: "Jumping Animations",
+    tags: ["beverage", "cafe", "cup", "caffeine", "morning"],
+    paths: [
+      "M18 8H6a1 1 0 0 0-1 1v7a6 6 0 0 0 6 6h2a6 6 0 0 0 6-6V9a1 1 0 0 0-1-1z",
+      "M17 8h1a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3h-1",
+      "M9 2v3",
+      "M12 2v3",
+      "M15 2v3"
+    ]
+  },
+  {
+    id: "jump-fire",
+    name: "Jumping Hot Flame",
+    category: "Jumping Animations",
+    tags: ["fire", "hot", "trending", "popular", "burn"],
+    paths: [
+      "M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3.5z"
+    ]
+  },
+  {
+    id: "jump-plane",
+    name: "Jumping Plane Takeoff",
+    category: "Jumping Animations",
+    tags: ["flight", "travel", "airport", "vacation", "trip"],
+    paths: [
+      "M22 2l-3 15-4-4-4 4-1-4-4-4 15-3 1 1z",
+      "M22 2L11 13"
+    ]
+  },
+  {
+    id: "jump-crown",
+    name: "Jumping Victory Crown",
+    category: "Jumping Animations",
+    tags: ["king", "queen", "champion", "award", "gold"],
+    paths: [
+      "M2 4l3 12h14l3-12-5 6-5-6-5 6-5-6z",
+      "M5 20h14"
+    ]
+  },
+  {
+    id: "jump-bolt",
+    name: "Jumping Lightning Bolt",
+    category: "Jumping Animations",
+    tags: ["flash", "thunder", "power", "charge", "speed"],
+    paths: [
+      "M13 2L3 14h9l-1 8 10-12h-9l1-8z"
+    ]
+  },
+  {
+    id: "jump-cursor",
+    name: "Jumping Click Cursor",
+    category: "Jumping Animations",
+    tags: ["click", "mouse", "pointer", "arrow", "select"],
+    paths: [
+      "M12 2l3 9-4-1-3 7-1-7-4 1 9-9z"
     ]
   }
 ];
