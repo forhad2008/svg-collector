@@ -207,7 +207,7 @@ export default function App() {
         </nav>
 
         {/* Zone 3: Action Buttons */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <button 
             onClick={() => {
               const activeCollectionIcons = ICONS.filter(i => collection.includes(i.id));
@@ -215,16 +215,21 @@ export default function App() {
               copyToClipboard(spritesheetCode, "Spritesheet");
             }}
             disabled={collection.length === 0}
-            className="neu-btn-interactive px-4 py-2.5 text-xs font-bold text-slate-700 rounded-xl whitespace-nowrap disabled:opacity-40 disabled:pointer-events-none"
+            className="neu-btn-interactive px-2.5 py-2 sm:px-4 sm:py-2.5 text-xs font-bold text-slate-700 rounded-xl whitespace-nowrap disabled:opacity-40 disabled:pointer-events-none flex items-center gap-1.5"
+            title="Copy Spritesheet"
           >
-            Copy Spritesheet
+            <Copy className="h-4 w-4 shrink-0 text-slate-500" />
+            <span className="hidden sm:inline">Copy Spritesheet</span>
           </button>
           <button 
             onClick={handleDownloadCollectionJson}
             disabled={collection.length === 0}
-            className="neu-btn-interactive px-4 py-2.5 text-xs font-bold text-indigo-600 rounded-xl whitespace-nowrap disabled:opacity-40 disabled:pointer-events-none"
+            className="neu-btn-interactive px-2.5 py-2 sm:px-4 sm:py-2.5 text-xs font-bold text-indigo-600 rounded-xl whitespace-nowrap disabled:opacity-40 disabled:pointer-events-none flex items-center gap-1.5"
+            title="Export Manifest"
           >
-            Export Manifest ({collection.length})
+            <Download className="h-4 w-4 shrink-0 text-indigo-500" />
+            <span className="hidden sm:inline">Export Manifest ({collection.length})</span>
+            <span className="inline sm:hidden font-mono text-[11px]">({collection.length})</span>
           </button>
         </div>
       </header>
